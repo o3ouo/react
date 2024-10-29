@@ -34,6 +34,7 @@
       align-content: center;
       background-color: paleturquoise;
       border-right: 1px solid #eee;
+      transition: width .5s;
      }
 
      ul li:last-child {
@@ -42,15 +43,21 @@
 
      @media screen and (max-width: 1024px) {
 
-      ul li {
-        width: 50%;
-        background-color: salmon;
-        border-bottom: 1px solid #eee;
-      }
-      
       ul li:last-child {
         display: none;
       }
+
+      ul li {
+        width: 50%;
+        background-color: salmon;
+        border-right: none;
+        border-bottom: 1px solid #eee;
+      }
+      
+      ul li:nth-child(2n) {
+        border-left: 1px solid #ccc;
+      }
+      
      }
 
      @media screen and (max-width: 575px) {
@@ -58,6 +65,10 @@
       ul li {
         width: 100%;
         background-color: plum;
+      }
+
+      ul li:nth-child(2n) {
+        border-left: none;
       }
      }
   </style>
