@@ -72,30 +72,30 @@
     // 5. 시간에 따라 인사말 출력
     // 6 ~ 11시 : 아침인사 / 12 ~ 17시 : 오후 인사 / 19시 이후 : 저녁인사
 
-    let time = new Date();
-    let getTime = time.getHours();
-    console.log(getTime);
+    // let time = new Date();
+    // let getTime = time.getHours();
+    // console.log(getTime);
 
-    if (getTime < 12 && getTime >= 6) {
-      console.log('아침 ㅎㅇ');
-    } else if (getTime >= 12 && getTime <= 15) {
-      console.log('오후 ㅎㅇ');
-    } else if (getTime > 17) {
-      console.log('저녁 ㅎㅇ')
-    } 
+    // if (getTime < 12 && getTime >= 6) {
+    //   console.log('아침 ㅎㅇ');
+    // } else if (getTime >= 12 && getTime <= 15) {
+    //   console.log('오후 ㅎㅇ');
+    // } else if (getTime > 17) {
+    //   console.log('저녁 ㅎㅇ')
+    // } 
 
     // --------------------------------------------------------------------
 
     // 6. BMI 계산기 키(cm) / 몸무게 입력 / 몸무게 나누기 키의 제곱
 
-    // let st = Number(prompt('키 몇임?'));
-    // let kg = Number(prompt('몸무게 몇임?'));
+    let st = Number(prompt('키 몇임?'));
+    let kg = Number(prompt('몸무게 몇임?'));
 
-    // let m = st / 100;
+    let m = st / 100;
 
-    // let bmi = kg / (m*m);
+    let bmi = kg / m**2;
 
-    // console.log(`BMI 수치 ${bmi}`);
+    console.log(`BMI 수치 ${bmi.toFixed(2)}`);
     
 
 
