@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>중첩반복문</title>
+</head>
+<body>
+  
+  <script>
+  
+    // 조건문 중첩
+    // if 조건문이 참일 경우 그 조건문 안에 있는 if 조건문을 참과 거짓으로 실행
+    // let age = Number(prompt('나이'));
+    let age = 30;
+
+    if (age >= 20) {
+      console.log('성인');
+
+      if(age >= 65) {
+        console.log('노인');
+      } else if (40 >= age && age >=30 ) {
+        console.log('중년임');
+      } else {
+        console.log('성인인데 노인은 아님');
+      }
+    } else {
+      console.log('민짜');
+    };
+
+    /*
+    중첩반복문
+    : 반복문을 여러겹 중첩해 사용하면 중첩반복문
+    : -n차원 처리할 떄 사용
+
+
+    */
+
+    // ex. -n 차원
+    let a = [[1, [2,3]],[4, 5, 6]]
+
+    // 중첩반복문
+    // 외부 반복문
+    for (let i = 0; i <= 5; i++) {
+
+      // 내부 반복문
+      for (let j = 0; j <= 5; j++) {
+        console.log(`i = ${i}, j = ${j}`);
+      };
+    };
+
+    // 구구단 만들기
+    for (let i = 2; i <= 9; i++) {
+      console.log(`${i}단`);
+
+      for (let j = 1; j <= 9; j++) {
+        console.log(`${i} * ${j} = ${i * j}`);
+      };
+
+      console.log("");
+
+    }
+
+    // 중첩 반복문으로 별 피라미드 형태로 만들기
+    let star = '';
+
+    for (let i = 1; i < 10; i++) {
+      for (let j = 0; j < i; j++) {
+        star += '⭐'
+      }
+      star += '\n';
+    }
+    console.log(star);
+
+    // 중첩 반복문 사용해서 피라미드
+    let p = '';
+
+    for (let i = 1; i < 15; i++) { // i의 초기값 1; i는 15보다 작을 때까지; i는 1씩 증가
+      
+      for (let j = 15; j > i; j--) { 
+        // j의 초기값 15; j가 i보다 클 때까지; j는 1씩 감소        
+        p += ' ';
+        // i = 1, j = 띄어쓰기 15번 반복
+        // i = 2, j = 띄어쓰기 14번 반복
+        // i = 
+
+      }
+
+      for (let t = 0; t < i; t++) {
+        p += '💙';
+      };
+
+      p += '\n';
+    }
+    console.log(p);
+
+    let p2 = '';
+
+    for (let i = 0; i < 6; i++) {
+      
+      for (let j = 0; j < (6 - i); j++) {
+        p2 += ' ';
+      };
+
+      for (let j = 0; j < (2 * i + 1); j++) {
+        p2 += '*';
+      };
+
+      p2 += '\n';
+    };
+    
+    console.log (p2);
+
+    // 중첩 반복문 사용해서 역피라미드
+    let w = '';
+
+  </script>
+
+</body>
+</html>
