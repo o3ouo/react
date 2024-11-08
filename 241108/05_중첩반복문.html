@@ -73,46 +73,74 @@
     console.log(star);
 
     // 중첩 반복문 사용해서 피라미드
-    let p = '';
+    let pyramid = '';
 
-    for (let i = 1; i < 15; i++) { // i의 초기값 1; i는 15보다 작을 때까지; i는 1씩 증가
-      
-      for (let j = 15; j > i; j--) { 
-        // j의 초기값 15; j가 i보다 클 때까지; j는 1씩 감소        
-        p += ' ';
-        // i = 1, j = 띄어쓰기 15번 반복
-        // i = 2, j = 띄어쓰기 14번 반복
-        // i = 
+    for (let i = 1; i < 15; i++) {
 
-      }
-
-      for (let t = 0; t < i; t++) {
-        p += '💙';
+      for (let j = 15; j > i; j--) {
+        pyramid += ' ';
       };
 
-      p += '\n';
-    }
-    console.log(p);
-
-    let p2 = '';
-
-    for (let i = 0; i < 6; i++) {
-      
-      for (let j = 0; j < (6 - i); j++) {
-        p2 += ' ';
+      for (let t = 0; t < (2 * i - 1); t++) {
+        pyramid += '*';
       };
 
-      for (let j = 0; j < (2 * i + 1); j++) {
-        p2 += '*';
-      };
-
-      p2 += '\n';
+      pyramid += '\n';
     };
-    
-    console.log (p2);
+
+    console.log(pyramid);
 
     // 중첩 반복문 사용해서 역피라미드
-    let w = '';
+    let reverse = '';
+
+    for (let i = 1; i < 15; i++) {
+
+      for (let j = 0; j < i; j++) {
+        reverse += ' ';
+      }
+
+      for (let t = 28; t > (2 * i - 1); t--) {
+        reverse += '*';
+      }
+
+      reverse += '\n';
+    }
+
+    console.log(reverse);
+
+    // 중첩 반복문 사용해서 다이아몬드
+    let dia = '';
+
+    for (let i = 1; i < 10; i++) {
+
+      for (let j = 10; j > i; j--) {
+        dia += ' ';
+      };
+
+      for (let t = 0; t < (2 * i -1); t++) {
+        dia += '*';
+      } ;
+
+      dia += '\n';
+    }
+
+    for (let i = 1; i < 10; i++) {
+
+      for (let j = 0; j < i; j++) {
+        dia += ' ';
+      };
+
+      for (let t = 18; t > (2 * i - 1); t--) {
+        // i는 최대 9번 반복. 2 * 9 - 1 = 17
+        // t가 최소 1번을 찍으려면 17보다 큰 18을 할당해야 함
+        dia += '*';
+      };
+
+      dia += '\n';
+    };
+
+    console.log(dia);
+
 
   </script>
 
