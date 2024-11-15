@@ -7,7 +7,7 @@ btn.forEach( (btns, i, a) => {
   a[i].addEventListener("click", () => {
   let img = document.querySelector(".left .img");
     
-    img.setAttribute('src', `../event_test/p${i}.jpg`);
+    img.setAttribute('src', `./event_test/p${i}.jpg`);
   });
   
 });

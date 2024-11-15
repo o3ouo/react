@@ -95,3 +95,7 @@ ul {
   padding: 1.5rem;
   gap: .5rem;
 }
+
+.main .right .i_box .img {
+  cursor: pointer;
+}
