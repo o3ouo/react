@@ -65,6 +65,7 @@ ul {
   text-align: center;
   font-size: .8rem;
   font-weight: 700;
+  color: #808080;
 }
 
 /* main */
@@ -78,6 +79,10 @@ ul {
 .main .left,
 .main .right {
   width: 50%;
+}
+
+.main .right {
+  flex-basis: 45%;
 }
 
 .main .right .t_box {

@@ -1,4 +1,5 @@
-
+function contents () {
+  
 let item = document.querySelectorAll(".item")
 console.log(item)
 
@@ -17,3 +18,5 @@ item.forEach( (items, index, array) => {
 
 });
 
+}
+contents();

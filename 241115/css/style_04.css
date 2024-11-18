@@ -9,6 +9,18 @@ body {
   color: #fff;
 }
 
+/* html전체의 스크롤바에 효과 */
+html::-webkit-scrollbar {
+  /* width: 0px; */
+  /* 스크롤바를 숨길수 있음, 하지만 살려서 쓰는 것이 좋고 배경색과 조금의 색 차이는 있는 것이 좋음 */
+  background-color: #333;
+}
+
+/* 스르롤바 안의 바 */
+html::-webkit-scrollbar-thumb {
+  background-color: #555;
+}
+
 img {
   max-width: 100%;
   display: block;
@@ -54,16 +66,21 @@ ul {
   display: block;
   padding: .4rem 1rem;
   border-radius: 2rem;
-  background-color: rgb(0, 60, 255);
+  background-color: #0063da;
 }
 
 /* main */
+.main {
+  width: 100%;
+  background: url(../event_test/background.jpg) no-repeat center/cover;
+}
 .main_i {
   max-width: 90%;
-  height: 937px;
+  height: 50vw;
+  min-height: 500px;
   margin: auto;
   padding: 0 1rem;
-  background: url(../event_test/background.jpg) no-repeat center/cover;
+  background-attachment: fixed;
   display: flex;
   align-items: center;
   font-size: calc(1rem + 2vw);
@@ -78,6 +95,7 @@ ul {
   padding: 0 1rem;
   display: flex;
   justify-content: space-between;
+  gap: 1rem;
 }
 
 .section .item {
@@ -92,8 +110,9 @@ ul {
   left: 50%;
   transform: translate(-50%, -50%);
   transition: .3s;
-  background-color: rgba(0, 0, 0, .5);
+  background: linear-gradient(transparent 0, 30%, #000);
   text-align: center;
   align-content: center;
   display: none;
+  cursor: pointer;
 }
